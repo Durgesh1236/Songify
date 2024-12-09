@@ -10,7 +10,7 @@ import Sidebar from './Components/Sidebar';
 import Navbar from './Components/Navbar';
 import Login from './Components/Login';
 
- export const url = 'http://localhost:4000'
+ export const url = import.meta.env.VITE_BACKEND_URL
 
 const App = () => {
 
