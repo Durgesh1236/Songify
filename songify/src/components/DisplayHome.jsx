@@ -8,7 +8,6 @@ import { PlayerContext } from '../context/PlayerContext'
 const DisplayHome = () => {
 
   const {songsData, albumsData} = useContext(PlayerContext)
-  console.log(songsData);
   
   return (
     <>
