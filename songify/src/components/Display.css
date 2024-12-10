@@ -1,0 +1,19 @@
+.display-container {
+    width: 100%;
+    margin: 8px;
+    padding: 16px 24px;
+    padding-top: 16px;
+    border-radius: 8px;
+    background-color: #121212;
+    color: white;
+    overflow: auto;
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 1024px) {
+    .display-container {
+      width: 75%;
+      margin-left: 0;
+    }
+  }
+  

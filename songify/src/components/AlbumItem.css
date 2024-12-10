@@ -1,0 +1,47 @@
+.album-item {
+    max-width: 200px;
+    min-width: 180px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .album-item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  .album-item img {
+    border-radius: 0.5rem;
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .album-item .name {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .album-item .description {
+    color: #94a3b8; /* Slate-200 */
+    font-size: 0.875rem; /* Text-sm */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .album-item {
+      max-width: 160px;
+      min-width: 140px;
+      padding: 0.5rem;
+    }
+  
+    .album-item .name {
+      font-size: 0.875rem; /* Smaller text for responsiveness */
+    }
+  
+    .album-item .description {
+      font-size: 0.75rem; /* Smaller description text */
+    }
+  }
+  

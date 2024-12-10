@@ -1,16 +1,24 @@
-import React, { useContext } from 'react'
-import { PlayerContext } from '../context/PlayerContext'
+import React, { useContext } from 'react';
+import { PlayerContext } from '../context/PlayerContext';
+import './SongItem.css';
 
-const SongItem = ({name,image,desc,id}) => {
+const SongItem = ({ name, image, desc, id }) => {
+  const { playWithId } = useContext(PlayerContext);
 
-  const { playWithId } = useContext(PlayerContext)
   return (
-    <div onClick={()=>playWithId(id)} className='max-w-[200px] min-w-[180px] p-2 px-3 rounded cursor-pointer hover:bg-[#ffffff26]'>
-      <img className='rounded' src={image} alt="" />
-      <p className='font-bold mt-2 mb-1'>{name}</p>
-      <p className='text-slate-200 text-sm'>{desc}</p>
+    <div
+      onClick={() => playWithId(id)}
+      className="song-item"
+    >
+      <img
+        className="song-item-image"
+        src={image}
+        alt={name}
+      />
+      <p className="song-item-name">{name}</p>
+      <p className="song-item-desc">{desc}</p>
     </div>
-  )
-}
+  );
+};
 
-export default SongItem
+export default SongItem;
