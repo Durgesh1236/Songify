@@ -7,10 +7,11 @@ import { PlayerContext } from './context/PlayerContext'
 const App = () => {
 
   const { audioRef, track, songsData } = useContext(PlayerContext)
+  console.log(songsData)
   return (
     <div className='h-screen bg-white'>
-      {
-        songsData.length !== 0 ?
+      {/* {
+        songsData.length === 0 ? */}
           <>
             <div className="h-[90%] flex">
               <Sidebar />
@@ -18,8 +19,8 @@ const App = () => {
             </div>
             <Player />
           </>
-          : "data not load"
-      }
+          {/* : "data not load"
+      } */}
 
       <audio ref={audioRef} src={ track ?  track.file : ""} preload='auto'></audio>
     </div>
