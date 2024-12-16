@@ -11,7 +11,7 @@ const Display = () => {
   const location = useLocation()
   const isAlbum = location.pathname.includes("album")
   const albumId = isAlbum ? location.pathname.split('/').pop() : "";
-  const bgColor = isAlbum && albumsData.length> 0 ? albumsData.find((x) => (x._id == albumId)).bgColour: "#121212";
+  const bgColor = isAlbum && albumsData.length> 0 ? albumsData.find((x) => (x._id === albumId)).bgColour: "#121212";
 
   useEffect(()=>{
     if(isAlbum){
@@ -26,8 +26,8 @@ const Display = () => {
       {
         albumsData.length > 0 ?
       <Routes>
-        <Route path='/' element={ <DisplayHome/> } />
-        <Route path='/album/:id' element={ <DisplayAlbum album={albumsData.find((x)=> (x._id == albumId))}/> } />
+        <Route path='/' element={ <DisplayHome /> } />
+        <Route path='/album/:id' element={ <DisplayAlbum album={albumsData.find((x)=> (x._id === albumId))}/> } />
       </Routes>
       : null
       }
