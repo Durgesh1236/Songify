@@ -18,7 +18,7 @@ const App = () => {
             </div>
             <Player />
           </>
-          : null
+          : "data not load"
       }
 
       <audio ref={audioRef} src={ track ?  track.file : ""} preload='auto'></audio>
