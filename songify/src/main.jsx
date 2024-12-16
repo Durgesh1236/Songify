@@ -6,11 +6,11 @@ import App from './App.jsx'
 import PlayerContextProvider from './context/PlayerContext.jsx'
 
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
+  <StrictMode>
     <BrowserRouter>
     <PlayerContextProvider>
         <App />
     </PlayerContextProvider>
     </BrowserRouter>
-  // </StrictMode>,
+   </StrictMode>,
 )
