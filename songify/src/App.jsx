@@ -7,11 +7,12 @@ import { PlayerContext } from './context/PlayerContext'
 const App = () => {
 
   const { audioRef, track, songsData } = useContext(PlayerContext)
+  
   console.log(songsData)
   return (
-    <div className='h-screen bg-white'>
+    <div className='h-screen bg-black'>
       {/* {
-        songsData.length === 0 ? */}
+        songsData.length !== 0 ? */}
           <>
             <div className="h-[90%] flex">
               <Sidebar />

@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useRef, useState } from 'react'
 import axios from 'axios'
+
 export const PlayerContext = createContext()
 
 const PlayerContextProvider = (props) =>{
@@ -8,7 +9,7 @@ const PlayerContextProvider = (props) =>{
     const seekbg = useRef()
     const seekBar = useRef()
 
-    const url = import.meta.env.VITE_BACKEND_URL
+    const url = import.meta.env.VITE_BACKEND_URL;
     const [songsData, setSongData] = useState([])
     const [albumsData, setalbumData] = useState([])
     const [track, setTrack] = useState(songsData[1])
